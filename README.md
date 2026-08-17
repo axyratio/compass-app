@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # compass_app
 
 The Compass sample application is an app that helps users build and book
@@ -57,3 +58,6 @@ $ flutter test integration_test/app_server_data_test.dart
 Running the tests together with `flutter test integration_test` will fail.
 See: https://github.com/flutter/flutter/issues/101031
 
+=======
+# compass-app
+>>>>>>> e175ff56339b183750b7712d09855272ddb7cba5
