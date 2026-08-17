@@ -23,8 +23,10 @@ This app contains multiple environments.
 
 ```bash 
 $ cd app
-$ flutter run --target lib/main_development.dart
+$ flutter run -d <platform>
 ```
+
+* platform such as chrome, edge, window
 
 * Staging environment - This environment uses an HTTP server to get data, simulating a real app experience. This is a "dummy" server, that has endpoints that simply return fake data. The server can be found in the `compass_app/server` directory. You need to run the server locally before running the Flutter application.
 
