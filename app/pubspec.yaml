@@ -3,7 +3,6 @@ description: >-
   A sample app that helps users build and book itineraries for trips.
 publish_to: none
 version: 0.1.0
-resolution: workspace
 
 environment:
   sdk: ^3.9.0-0
@@ -26,8 +25,6 @@ dependencies:
   shared_preferences: ^2.3.5
 
 dev_dependencies:
-  analysis_defaults:
-    path: ../../analysis_defaults
   flutter_test:
     sdk: flutter
   mocktail_image_network: ^1.2.0
