@@ -20,14 +20,12 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/5.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-(x1^faw=-4ij7d43bi+##qysk0fwm7%6ap$c8^q2)_r^wb(o$^'
+SECRET_KEY = 'django-insecure-=+&_(25_4(o%h!qm=cm#=rbh!tkq3bnlpy&4s=49&(8kl9oh+$'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
 ALLOWED_HOSTS = []
-
-
 
 
 # Application definition
@@ -39,15 +37,9 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'django.contrib.sites',   
+    'django.contrib.sites',   # จำเป็นสำหรับ oidc_provider
     'oidc_provider',
 ]
-
-SITE_ID = 1
-
-OIDC_USERINFO = 'config.oidc.userinfo'   # ฟังก์ชันที่จะสร้างเดี๋ยวข้างล่าง
-
-LOGIN_URL = '/admin/login/'   # หรือหน้า login ของคุณเอง
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -59,8 +51,14 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-ROOT_URLCONF = 'backend2.urls'
+SITE_ID =1
 
+# ตั้งค่าเบื้องต้นของ OIDC
+OIDC_USERINFO = 'config.oidc.userinfo'   # ฟังก์ชันที่จะสร้างเดี๋ยวข้างล่าง
+
+LOGIN_URL = '/admin/login/'   # หรือหน้า login ของคุณเอง
+
+ROOT_URLCONF = 'backend2.urls'
 
 TEMPLATES = [
     {
